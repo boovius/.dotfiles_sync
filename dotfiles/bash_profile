@@ -37,13 +37,13 @@ export PATH=$PATH:~/bin
 
 # Bash Git Completion
 # Install: curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-__git_complete gb _git_branch
-__git_complete gco _git_checkout
-__git_complete gpl _git_push
+#if [ -f ~/.git-completion.bash ]; then
+#  . ~/.git-completion.bash
+#fi
+#
+#__git_complete gb _git_branch
+#__git_complete gco _git_checkout
+#__git_complete gpl _git_push
 export PATH=/usr/local/bin:$PATH
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
