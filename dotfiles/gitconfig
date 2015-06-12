@@ -33,7 +33,7 @@
   mom = merge origin master
 [core]
   pager = less -FXRS -x2
-	excludesfile = /Users/joshuabook/.gitignore_global
+	excludesfile = /Users/pudge/.gitignore_global
   editor = /usr/bin/vim
 [apply]
   whitespace = nowarn
