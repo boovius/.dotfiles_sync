@@ -1,0 +1,49 @@
+# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
+# ~/.extra can be used for settings you don’t want to commit
+for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+	[ -r "$file" ] && source "$file"
+done
+unset file
+
+# set vim as command line editor
+set -o vi
+bind -m vi-command ".":insert-last-argument
+
+# gives time now
+function now {
+  date +%m/%d-%H:%M
+}
+
+# init z   https://github.com/rupa/z
+# . ~/code/z/z.sh
+
+# use rvm
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
+# Add tab completion for `defaults read|write NSGlobalDomain`
+# You could just use `-g` instead, but I like being explicit
+complete -W "NSGlobalDomain" defaults
+
+export PATH=$PATH:~/bin
+
+# Bash Git Completion
+# Install: curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+__git_complete gb _git_branch
+__git_complete gco _git_checkout
+__git_complete gpl _git_push
+export PATH=/usr/local/bin:$PATH
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin

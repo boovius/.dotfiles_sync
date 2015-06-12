@@ -1,0 +1,51 @@
+[user]
+  name = Joshua Book
+  email = joshua.book@gmail.com
+[alias]
+  ci = commit
+  st = status --short --branch -u
+  di = diff
+  co = checkout
+  br = branch
+  b  = branch
+  ba = branch -a
+  bd = branch -d
+  sta = stash
+  llog = log --date=local
+  flog = log --pretty=fuller --decorate
+  lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  blog = log origin/master... --left-right
+  ds = diff --staged
+  fixup = commit --fixup
+  squash = commit --squash
+  unstage = reset HEAD
+  rum = rebase master@{u}
+  mg = merge --no-ff --no-edit
+  info = show --stat
+  dc = diff --cached
+  amend = commit --amend --no-edit
+  wip = !git add . && git commit -m "wip"
+  rollback = reset HEAD~1
+  poh = push origin head
+  rpo = remote prune origin
+  mom = merge origin master
+[core]
+  pager = less -FXRS -x2
+	excludesfile = /Users/joshuabook/.gitignore_global
+  editor = /usr/bin/vim
+[apply]
+  whitespace = nowarn
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+[branch]
+  autosetupmerge = true
+[rebase]
+  autosquash = true
+[push]
+  default = simple
