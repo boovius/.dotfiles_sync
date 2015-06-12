@@ -33,7 +33,6 @@ export LANG="en_US"
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
-export PATH=$PATH:~/bin
 
 # Bash Git Completion
 # Install: curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
@@ -48,6 +47,10 @@ export PATH=$PATH:~/bin
 # git ignore all things in ~/.gitignore_global file
 git config --global core.excludesfile ~/.gitignore_global
 
+export PATH=$PATH:~/bin
+
 export PATH=/usr/local/bin:$PATH
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
+export PATH=~/.rbenv/shims:$PATH
