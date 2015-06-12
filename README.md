@@ -14,6 +14,8 @@ A collection of very useful config files and sync
  - run sync command (from ~/.dotfiles_sync dir): `./makesymlinks.sh`
    - the sync will only update files in the ~/.dotfiles_sync/dotfiles dir
    - anything else in your home dir will be left untouched
+ - source ~/.bash_profile
+   - `reload` is an alias to source bash_profile, so once you've done it once, `reload` will do the trick after
 
 ## Adding new files
  - all new files should be added to the dotfiles dir (i.e. ~/.dotfiles_sync/dotfiles)
