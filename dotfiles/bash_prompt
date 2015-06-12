@@ -1,5 +1,5 @@
-source "/Users/joshuabook/.colors.theme.bash"
-source "/Users/joshuabook/.base.theme.bash"
+source ~/.colors.theme.bash
+source ~/.base.theme.bash
 
 SCM_THEME_PROMPT_DIRTY=" ${red}🚨 "
 SCM_THEME_PROMPT_CLEAN=" ${bold_green}✓"
