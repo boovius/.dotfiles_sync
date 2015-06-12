@@ -19,5 +19,5 @@ A collection of very useful config files and sync
  - commit your changes (and push em back up to your forked repo if you so desire)
  - re-run the sync command
 
-### By Joshua Book
+### By Boovius
 
