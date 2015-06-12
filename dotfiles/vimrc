@@ -93,6 +93,7 @@ nnoremap <Leader>q :q<CR>
 
 " Movement
 nnoremap ; G
+nnoremap ;; ``
 nnoremap <bs> gg
 
 " paste and jump to bottom of insertion
