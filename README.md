@@ -27,4 +27,4 @@ A collection of very useful config files and sync
  - re-run the sync command
 
 ### By Boovius
-
+original sync script pulled from [Michael Smalley](https://github.com/michaeljsmalley/dotfiles/blob/master/makesymlinks.sh) and then updated by me
