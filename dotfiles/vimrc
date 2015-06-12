@@ -95,6 +95,8 @@ nnoremap <Leader>q :q<CR>
 nnoremap ; G
 nnoremap ;; ``
 nnoremap <bs> gg
+nnoremap W b
+nnoremap <C-a> ^
 
 " paste and jump to bottom of insertion
 vnoremap <silent> y y`]
