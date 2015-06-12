@@ -95,8 +95,12 @@ nnoremap <Leader>q :q<CR>
 nnoremap ; G
 nnoremap ;; ``
 nnoremap <bs> gg
-nnoremap W b
+nnoremap <C-w> b
 nnoremap <C-a> ^
+
+" up and down swift movement
+map <C-j> 10j
+map <C-k> 10k
 
 " paste and jump to bottom of insertion
 vnoremap <silent> y y`]
@@ -122,9 +126,6 @@ map <silent> <leader>r :call TriggerPreviousTest()<CR>
 
 " Increment/Decrement Numbers
 nnoremap <C-s> <C-a>
-
-" up and down swift movement
-map <press Ctrl-V><A-j>10j<press Ctrl-V><press Enter>
 
 " *** Miscellaneous ***
 
