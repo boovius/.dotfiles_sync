@@ -1,5 +1,5 @@
 # Reload
-alias reload='source /users/joshuabook/.bash_profile'
+alias reload='source ~/.bash_profile'
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
