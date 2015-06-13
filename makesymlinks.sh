@@ -6,7 +6,8 @@
 
 ########## Variables
 
-dir=~/.dotfiles/dotfiles           # dotfiles directory
+cwd=$(pwd)
+dir=$cwd/dotfiles           # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
 path=$((${#dir}+1))
 array=(); for file in $dir/*; do array+=("${file:path}"); done
