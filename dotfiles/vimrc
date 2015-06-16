@@ -95,7 +95,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap ; G
 nnoremap ;; ``
 nnoremap <bs> gg
-nnoremap <C-w> b
+nnoremap W b
 nnoremap <C-a> ^
 
 " up and down swift movement
