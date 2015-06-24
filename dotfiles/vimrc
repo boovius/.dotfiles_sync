@@ -90,6 +90,8 @@ set nofoldenable      " Open files with all folds expanded
 nnoremap <Leader>w :w<CR>
 " map quit to leader q
 nnoremap <Leader>q :q<CR>
+" map delete trailing white space to leader d
+nnoremap <Leader>d :DeleteTrailingWhitespace<CR>
 
 " Movement
 nnoremap ; G
