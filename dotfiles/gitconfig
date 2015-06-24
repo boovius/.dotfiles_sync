@@ -1,5 +1,6 @@
 [user]
-  name = Joshua Book
+  #name = Joshua Book
+  name = Joshua Book and Haskel Ash
   email = joshua.book@gmail.com
 [alias]
   ci = commit
@@ -33,8 +34,8 @@
   mom = merge origin master
 [core]
   pager = less -FXRS -x2
-	excludesfile = /Users/joshuabook/.gitignore_global
   editor = /usr/bin/vim
+	excludesfile = /Users/pudge/.gitignore_global
 [apply]
   whitespace = nowarn
 [color]
