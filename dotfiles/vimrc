@@ -92,6 +92,8 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 " map delete trailing white space to leader d
 nnoremap <Leader>d :DeleteTrailingWhitespace<CR>
+" map tabedit to leader j
+nnoremap <Leader>j :tabedit 
 
 " Movement
 nnoremap ; G
