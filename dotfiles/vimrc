@@ -97,6 +97,7 @@ nnoremap ;; ``
 nnoremap <bs> gg
 nnoremap W b
 nnoremap <C-a> ^
+nnoremap <C-e> $
 
 " up and down swift movement
 map <C-j> 10j
