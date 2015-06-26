@@ -32,6 +32,7 @@
   poh = push origin head
   rpo = remote prune origin
   mom = merge origin master
+  lom = !git lol origin/master
 [core]
   pager = less -FXRS -x2
   editor = /usr/bin/vim
