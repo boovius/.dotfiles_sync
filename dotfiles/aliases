@@ -2,6 +2,8 @@
 alias reload='source ~/.bash_profile'
 # Re-Sync dotfiles
 alias resync='~/.dotfiles_sync/makesymlinks.sh'
+# cd to this path
+alias dotfiles='cd ~/.dotfiles_sync/dotfiles'
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
