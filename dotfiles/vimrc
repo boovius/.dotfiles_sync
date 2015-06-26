@@ -30,6 +30,7 @@ Plugin 'ToadJamb/vim_alternate_file'
 Plugin 'ToadJamb/vim_tab_number'
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'vim-multiple-cursors'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
