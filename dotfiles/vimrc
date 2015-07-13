@@ -105,8 +105,12 @@ nnoremap <C-a> ^
 nnoremap <C-e> $
 
 " up and down swift movement
-map <C-j> 10j
-map <C-k> 10k
+map <C-f> 10j
+map <C-d> 10k
+
+" tab movement
+nnoremap <C-o> gt
+nnoremap <C-i> gT
 
 " paste and jump to bottom of insertion
 vnoremap <silent> y y`]
