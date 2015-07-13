@@ -22,3 +22,5 @@ vendor/bundle
 .bundle
 
 .env
+
+.cane
