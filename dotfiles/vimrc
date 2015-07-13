@@ -94,7 +94,9 @@ nnoremap <Leader>q :q<CR>
 " map delete trailing white space to leader d
 nnoremap <Leader>d :DeleteTrailingWhitespace<CR>
 " map tabedit to leader j
-nnoremap <Leader>j :tabedit 
+nnoremap <Leader>j :tabedit
+" map fuzzy search in new tab
+nnoremap <Leader>p :tabedit<CR>
 
 " Movement
 nnoremap ; G
