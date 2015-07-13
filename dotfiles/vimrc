@@ -31,6 +31,8 @@ Plugin 'ToadJamb/vim_tab_number'
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()
 filetype plugin indent on
@@ -97,6 +99,12 @@ nnoremap <Leader>d :DeleteTrailingWhitespace<CR>
 nnoremap <Leader>j :tabedit
 " map fuzzy search in new tab
 nnoremap <Leader>p :tabedit<CR>
+
+" map NERDtree plugin for file tree viewing
+map <Leader>/ :NERDTreeToggle<CR>
+" open nerd tree automatically upon startup if no files specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Movement
 nnoremap ; G
