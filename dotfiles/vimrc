@@ -109,7 +109,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Movement
 nnoremap ; G
 nnoremap ;; ``
-nnoremap <bs> gg
+nnoremap \ gg
 nnoremap W b
 nnoremap <C-a> ^
 nnoremap <C-e> $
