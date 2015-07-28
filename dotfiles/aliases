@@ -56,6 +56,8 @@ alias bi='bundle install'
 alias bu='bundle update'
 alias be='bundle exec'
 alias ber='bundle exec rake'
+alias bers='bundle exec rails s'
+alias berc='bundle exec rails c'
 
 # tree
 alias tree='tree -I vendor' # show tree without vendor
