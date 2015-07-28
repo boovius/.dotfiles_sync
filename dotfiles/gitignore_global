@@ -21,6 +21,4 @@ tags
 vendor/bundle
 .bundle
 
-.env
-
-.cane
+scratch*
