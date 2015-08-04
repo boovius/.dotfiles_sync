@@ -33,6 +33,7 @@ Plugin 'vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -97,11 +98,13 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>d :DeleteTrailingWhitespace<CR>
 " map tabedit to leader j
 nnoremap <Leader>j :tabedit
-" map fuzzy search in new tab
+" open new tab with leader p
 nnoremap <Leader>p :tabedit<CR>
+" map edit to leader e
+nnoremap <Leader>e :e 
 
 " map NERDtree plugin for file tree viewing
-map <Leader>/ :NERDTreeToggle<CR>
+map <Leader>' :NERDTreeToggle<CR>
 " open nerd tree automatically upon startup if no files specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -133,6 +136,11 @@ nnoremap <cr> :nohlsearch<cr>
 " Open alternate files
 command AF :execute OpenAlternateFile()
 map <silent> <leader>s :call OpenAlternateFile() <CR>
+
+" Buffers
+nnoremap <Leader>/ :buffers<CR>
+nnoremap <Leader>f :b 
+nnoremap <C-l> <C-6>
 
 " Run tests
 map <silent> <leader>t :call TriggerTest()<CR>
