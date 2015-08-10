@@ -33,7 +33,7 @@ Plugin 'vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'mileszs/ack.vim'
+Plugin 'vim-buffergator'
 
 call vundle#end()
 filetype plugin indent on
