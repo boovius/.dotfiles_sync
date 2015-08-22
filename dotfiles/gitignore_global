@@ -24,3 +24,5 @@ vendor/bundle
 scratch*
 
 todo*
+
+node_modules/*
