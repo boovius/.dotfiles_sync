@@ -33,7 +33,6 @@ Plugin 'vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'vim-buffergator'
 
 call vundle#end()
 filetype plugin indent on
@@ -86,6 +85,7 @@ set nofoldenable      " Open files with all folds expanded
 " Toggle folding using the space bar.
 "nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 "vnoremap <Space> zf
+nnoremap <Tab> :foldopen
 
 " map leader to space bar
 :let mapleader = "\<Space>"
