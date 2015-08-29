@@ -23,6 +23,6 @@ vendor/bundle
 
 scratch*
 
-todo*
+todo.md
 
 node_modules/*
