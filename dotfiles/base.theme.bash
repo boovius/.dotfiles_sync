@@ -41,6 +41,10 @@ VIRTUALENV_THEME_PROMPT_SUFFIX='|'
 RBENV_THEME_PROMPT_PREFIX=' |'
 RBENV_THEME_PROMPT_SUFFIX='|'
 
+function git_author {
+  git config user.name
+}
+
 function scm {
   if [[ "$SCM_CHECK" = false ]]; then SCM=$SCM_NONE
   elif [[ -f .git/HEAD ]]; then SCM=$SCM_GIT
