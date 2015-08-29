@@ -99,11 +99,11 @@ nnoremap <Leader>q :q<CR>
 " map delete trailing white space to leader d
 nnoremap <Leader>d :DeleteTrailingWhitespace<CR>
 " map tabedit to leader j
-nnoremap <Leader>j :tabedit
+nnoremap <Leader>j :tabedit<Space>
 " open new tab with leader p
 nnoremap <Leader>p :tabedit<CR>
 " map edit to leader e
-nnoremap <Leader>e :e 
+nnoremap <Leader>e :e<Space>
 
 " map NERDtree plugin for file tree viewing
 map <Leader>' :NERDTreeToggle<CR>
@@ -141,8 +141,7 @@ map <silent> <leader>s :call OpenAlternateFile() <CR>
 
 " Buffers
 nnoremap <Leader>/ :buffers<CR>
-nnoremap <Leader>f :b 
-nnoremap <C-l> <C-6>
+nnoremap <Leader>f :b<Space>
 
 " Run tests
 map <silent> <leader>t :call TriggerTest()<CR>
