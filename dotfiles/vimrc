@@ -124,8 +124,8 @@ map <C-f> 10j
 map <C-d> 10k
 
 " tab movement
-nnoremap <C-o> gt
-nnoremap <C-i> gT
+"nnoremap <C-o> gt
+"nnoremap <C-i> gT
 
 " paste and jump to bottom of insertion
 vnoremap <silent> y y`]
@@ -142,6 +142,8 @@ map <silent> <leader>s :call OpenAlternateFile() <CR>
 " Buffers
 nnoremap <Leader>/ :buffers<CR>
 nnoremap <Leader>f :b<Space>
+nnoremap <C-i> :bprevious<CR>
+nnoremap <C-o> :bnext<CR>
 
 " Run tests
 map <silent> <leader>t :call TriggerTest()<CR>
