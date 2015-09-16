@@ -5,6 +5,7 @@
 [alias]
   ci = commit
   st = status --short --branch -u
+  f  = fetch
   di = diff
   co = checkout
   br = branch
