@@ -144,6 +144,8 @@ nnoremap <Leader>/ :buffers<CR>
 nnoremap <Leader>f :b<Space>
 nnoremap <C-i> :bprevious<CR>
 nnoremap <C-o> :bnext<CR>
+" go to previous buffer and delete last one
+nnoremap <C-u> :bprevious<CR>:bd#<CR>
 
 " Run tests
 map <silent> <leader>t :call TriggerTest()<CR>
