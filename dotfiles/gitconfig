@@ -1,5 +1,8 @@
 [user]
   name = Joshua Book
+  #name = Joshua Book and Sean Stavropoulos and Brett U
+  #name = Joshua Book and Brett U
+  #name = Joshua Book and Travis Herrick
   email = joshua.book@gmail.com
 [alias]
   ci = commit
