@@ -1,6 +1,5 @@
 [user]
-  #name = Joshua Book
-  name = Joshua Book and Haskel Ash
+  name = Joshua Book
   email = joshua.book@gmail.com
 [alias]
   ci = commit
