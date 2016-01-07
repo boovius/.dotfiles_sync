@@ -115,13 +115,14 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nnoremap ; G
 nnoremap ;; ``
 nnoremap \ gg
-nnoremap W b
 nnoremap <C-a> ^
 nnoremap <C-e> $
 
 " up and down swift movement
 map <C-f> 10j
 map <C-d> 10k
+map W 10w
+map B 10b
 
 " tab movement
 "nnoremap <C-o> gt
