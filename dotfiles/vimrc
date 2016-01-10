@@ -7,6 +7,7 @@ set rtp+=~/.vim/bundle/vundle.vim
 call vundle#begin()
 
 Bundle 'gmarik/vundle.vim'
+Bundle 'mxw/vim-jsx'
 
 " vim-snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -33,8 +34,9 @@ Plugin 'vim-multiple-cursors'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
 Plugin 'boovius/vim-buffergator'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -160,6 +162,9 @@ map <silent> <leader>r :call TriggerPreviousTest()<CR>
 
 " Increment/Decrement Numbers
 nnoremap <C-s> <C-a>
+
+"jsx highlighting
+let g:jsx_ext_required = 0
 
 " *** Miscellaneous ***
 
