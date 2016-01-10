@@ -121,8 +121,8 @@ nnoremap <C-a> ^
 nnoremap <C-e> $
 
 " up and down swift movement
-map <C-f> 10j
-map <C-d> 10k
+map <C-d> 10j
+map <C-f> 10k
 map W 10w
 map B 10b
 
