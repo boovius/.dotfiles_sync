@@ -8,6 +8,7 @@ call vundle#begin()
 
 Bundle 'gmarik/vundle.vim'
 Bundle 'mxw/vim-jsx'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " vim-snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -30,12 +31,11 @@ Plugin 'vim-scripts/Align'
 Plugin 'ToadJamb/vim_alternate_file'
 Plugin 'ToadJamb/vim_tab_number'
 Plugin 'Keithbsmiley/swift.vim'
-Plugin 'vim-multiple-cursors'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'pangloss/vim-javascript'
 Plugin 'boovius/vim-buffergator'
+Plugin 'terryma/vim-multiple-cursors'
 
 
 call vundle#end()
