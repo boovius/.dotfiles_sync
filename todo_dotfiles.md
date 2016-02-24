@@ -3,11 +3,10 @@ TODO
 
 VIM
 ---
-* fix buffergator
+* Alt . on command line repeat last input
 * moving visually highlighted lines up and down
-* fix C-J C-K movement around vim/tmux panes
-* fix vim snippets usage
 * move vim snippets into dotfiles symlinks
 * speed up Ctrl-P fuzzy search
-* upgrade to vim >7.4
+* wrapping txt in md docs
+* changing visual highlighting of line cursor is on
 
