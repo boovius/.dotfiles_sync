@@ -28,5 +28,8 @@ A collection of very useful config files and sync
  - commit your changes (and push em back up to your forked repo if you so desire)
  - re-run the sync command
 
+## Extras
+ - install the [Hack Font](https://github.com/chrissimpkins/Hack#desktop-usage)
+
 ### By Boovius
 original sync script pulled from [Michael Smalley](https://github.com/michaeljsmalley/dotfiles/blob/master/makesymlinks.sh) and then updated by me
