@@ -187,9 +187,6 @@ inoremap <C-.> <Esc>:m .-2<CR>==gi
 vnoremap <C-,> :m '>+1<CR>gv=gv
 vnoremap <C-.> :m '<-2<CR>gv=gv
 
-" Increment/Decrement Numbers
-nnoremap <C-s> <C-a>
-
 "jsx highlighting
 let g:jsx_ext_required = 0
 
@@ -197,5 +194,6 @@ let g:jsx_ext_required = 0
 
 "let g:solarized_termcolors=16  " Local
 "let g:solarized_termcolors=256 " Remote
-"set background=light
-color solarized
+syntax enable
+set background=dark
+colorscheme solarized
