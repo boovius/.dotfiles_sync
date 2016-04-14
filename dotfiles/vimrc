@@ -114,6 +114,13 @@ map <Leader>' :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" CHARACTER INSERTION AND MANIPULATION
+" Increment/Decrement Numbers
+"nnoremap <C-s> <C-a>
+
+" insert space
+nnoremap <Leader>n i<Space><esc>
+
 " MOVEMENT
 " go to line
 nnoremap ; G
