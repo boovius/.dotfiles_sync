@@ -160,6 +160,7 @@ map <silent> <leader>s :call OpenAlternateFile() <CR>
 " BUFFERS
 nnoremap <Leader>/ :buffers<CR>
 nnoremap <Leader>f :b<Space>
+nnoremap <Leader>v :vert sb<Space>
 nnoremap <C-i> :bprevious<CR>
 nnoremap <C-o> :bnext<CR>
 " go to previous buffer and delete last one
