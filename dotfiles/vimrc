@@ -14,7 +14,6 @@ Bundle 'christoomey/vim-tmux-navigator'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'vim-scripts/tlib'
 
-Plugin 'ToadJamb/vim_test_runner'
 Plugin 'garbas/vim-snipmate'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rake'
@@ -36,6 +35,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'pangloss/vim-javascript'
 Plugin 'boovius/vim-buffergator'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ToadJamb/vim_test_runner'
 
 
 call vundle#end()
