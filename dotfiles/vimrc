@@ -129,17 +129,17 @@ nnoremap ;; ``
 " go to top
 nnoremap \ gg
 " go to front of line
-nnoremap <C-a> ^
+"nnoremap <C-a> ^
 " go to end of line
 nnoremap <C-e> $
 " jump down 10 lines
 map <C-f> 10j
 " jump up 10 lines
 map <C-g> 10k
-" jump forward 10 words
-map W 10w
-" jump backward 10 words
-map B 10b
+" jump forward 5 words
+map W 5w
+" jump backward 5 words
+map B 5b
 
 " tab movement
 "nnoremap <C-o> gt
