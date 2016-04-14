@@ -89,7 +89,8 @@ set nofoldenable      " Open files with all folds expanded
 " Toggle folding using the space bar.
 "nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 "vnoremap <Space> zf
-nnoremap <Tab> :foldopen
+"nnoremap <C-]> :foldopen
+"nnoremap <C-[> :foldclose
 
 " map leader to space bar
 :let mapleader = "\<Space>"
