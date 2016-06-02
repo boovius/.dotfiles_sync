@@ -36,6 +36,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'boovius/vim-buffergator'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ToadJamb/vim_test_runner'
+Plugin 'leafgarland/typescript-vim'
 
 
 call vundle#end()
