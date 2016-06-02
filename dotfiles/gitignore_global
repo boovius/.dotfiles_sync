@@ -26,3 +26,7 @@ scratch*
 todo.md
 
 node_modules/*
+
+.ruby-version
+
+npm-debug-log
