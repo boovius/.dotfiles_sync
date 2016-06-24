@@ -30,3 +30,5 @@ node_modules/*
 .ruby-version
 
 npm-debug-log
+
+my_scratch*
