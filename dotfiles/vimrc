@@ -75,6 +75,9 @@ set hlsearch                 " Highligh search text
 set laststatus=2             " Always show the status bar
 set listchars=trail::,tab:-> " How trailing spaces & tabs should be represented (tabstop matters for tab)
 set list                     " Required in order for listchars to work
+set ruler
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+set colorcolumn=108
 
 " Performance - Primarily for Ruby - Any file around 200 lines has a problem.
 " Solution found here:
