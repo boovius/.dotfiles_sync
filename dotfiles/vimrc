@@ -39,7 +39,6 @@ Plugin 'ToadJamb/vim_test_runner'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mileszs/ack.vim'
 
-
 call vundle#end()
 filetype plugin indent on
 
