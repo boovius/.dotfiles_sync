@@ -72,7 +72,7 @@ alias shotgun='bundle exec shotgun config.ru'
 alias ngrok=/Applications/ngrok
 
 # reset mic/cam for video (google hangout)
-alias reset_cam = sudo killall VDCAssistant
+alias reset_cam = 'sudo killall VDCAssistant'
 
 # tmux
 alias tmux='TERM=xterm-256color tmux'
