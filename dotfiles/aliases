@@ -1,4 +1,6 @@
 # Reload
+source ~/.local_aliases
+
 alias reload='source ~/.bash_profile'
 # Re-Sync dotfiles
 alias resync='~/.dotfiles_sync/makesymlinks.sh'
