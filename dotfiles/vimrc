@@ -134,7 +134,7 @@ nnoremap ;; ``
 " go to top
 nnoremap \ gg
 " go to front of line
-"nnoremap <C-a> ^
+nnoremap E ^
 " go to end of line
 nnoremap <C-e> $
 " jump down 10 lines
