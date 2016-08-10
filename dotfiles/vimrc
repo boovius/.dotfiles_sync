@@ -169,12 +169,21 @@ nnoremap <Leader>v :vert sb<Space>
 nnoremap <C-i> :bprevious<CR>
 nnoremap <C-o> :bnext<CR>
 " go to previous buffer and delete last one
-nnoremap <C-c> :bprevious<CR>:bd#<CR>
+nnoremap <C-Delete> :bprevious<CR>:bd#<CR>
 nnoremap <Leader>3 :b#<CR>
 
 " RUN TESTS
 map <silent> <leader>t :call TriggerTest()<CR>
 map <silent> <leader>r :call TriggerPreviousTest()<CR>
+
+" Fuzzy Search Ctrl-P - utilizing Silver Searcher
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 " *** No Color Scheme ***
 
