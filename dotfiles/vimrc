@@ -38,6 +38,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ToadJamb/vim_test_runner'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 
 call vundle#end()
 filetype plugin indent on
