@@ -3,6 +3,9 @@ set t_Co=16
 set nocompatible
 filetype off
 
+" Add snippets dir to vim runtimepath
+set rtp+=~/.vim/snippets
+
 set rtp+=~/.vim/bundle/vundle.vim
 call vundle#begin()
 
@@ -12,9 +15,10 @@ Bundle 'christoomey/vim-tmux-navigator'
 
 " vim-snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 Plugin 'vim-scripts/tlib'
-
 Plugin 'garbas/vim-snipmate'
+
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-endwise'
@@ -115,6 +119,8 @@ nnoremap <Leader>e :e<Space>
 
 " map NERDtree plugin for file tree viewing
 map <Leader>' :NERDTreeToggle<CR>
+" Go to open file locaction in NerdTree
+map <Leader>\ :NERDTreeFind<CR>
 " open nerd tree automatically upon startup if no files specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -134,9 +140,7 @@ nnoremap ;; ``
 " go to top
 nnoremap \ gg
 " go to front of line
-nnoremap E ^
-" go to end of line
-nnoremap <C-e> $
+nnoremap <C-a> ^
 " jump down 10 lines
 map <C-f> 10j
 " jump up 10 lines
@@ -185,6 +189,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 
+" Configure Ag - Silver Searcher to start at project root
+let g:ag_working_path_mode="r"
+
 " *** No Color Scheme ***
 
 "hi! String ctermfg=00
@@ -203,6 +210,9 @@ vnoremap <C-.> :m '<-2<CR>gv=gv
 
 "jsx highlighting
 let g:jsx_ext_required = 0
+
+"ejs syntax
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " *** Miscellaneous ***
 
