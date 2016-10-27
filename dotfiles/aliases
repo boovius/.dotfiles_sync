@@ -23,6 +23,7 @@ alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.c
 # handy things
 alias bunyip='node ~/code/bunyip/cli.js'
 # alias spotify="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
+alias mongo-express='node ~/.nvm/versions/node/v6.2.1/lib/node_modules/mongo-express/app.js'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -63,9 +64,6 @@ alias berc='bundle exec rails c'
 
 # tree
 alias tree='tree -I vendor' # show tree without vendor
-
-# sublime
-alias subl='open -a "sublime text 2"'
 
 # shotgun sinatra
 alias shotgun='bundle exec shotgun config.ru'
