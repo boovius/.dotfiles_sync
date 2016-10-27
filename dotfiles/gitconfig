@@ -10,6 +10,7 @@
   br = branch
   b  = branch
   ba = branch -a
+  bam = branch -a --merged
   bd = branch -d
   sta = stash
   llog = log --date=local
