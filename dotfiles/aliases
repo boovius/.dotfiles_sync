@@ -143,3 +143,6 @@ function authme {
   ssh $1 'cat >> ~/.ssh/authorized_keys' < ~/.ssh/id_rsa.pub
 }
 # Use `ssh copy-id user@server.com` instead (OS X for some reason doesn't have this command)
+#
+# Print path with each entry on new line
+alias path="echo $PATH | tr ':' '\n'"
