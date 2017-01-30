@@ -32,3 +32,5 @@ node_modules/*
 npm-debug-log
 
 my_scratch*
+
+.env*
