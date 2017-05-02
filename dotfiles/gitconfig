@@ -31,6 +31,7 @@
   wip = !git add . && git commit -m "wip"
   rollback = reset HEAD~1
   poh = push origin head
+  pohf = push origin head --force-with-lease
   rpo = remote prune origin
   mom = merge origin/master
   lom = !git lol origin/master
