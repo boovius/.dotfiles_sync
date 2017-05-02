@@ -16,7 +16,6 @@ Bundle 'christoomey/vim-tmux-navigator'
 " vim-snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'vim-scripts/tlib'
 Plugin 'garbas/vim-snipmate'
 
 Plugin 'tpope/vim-surround'
@@ -43,6 +42,8 @@ Plugin 'ToadJamb/vim_test_runner'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
