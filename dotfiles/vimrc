@@ -44,6 +44,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
+Plugin 'kshenoy/vim-signature'
 
 call vundle#end()
 filetype plugin indent on
@@ -176,6 +177,9 @@ nnoremap <C-o> :bnext<CR>
 " go to previous buffer and delete last one
 nnoremap <C-Delete> :bprevious<CR>:bd#<CR>
 nnoremap <Leader>3 :b#<CR>
+
+" MARKERS - for use with vim-signature marker plugin
+nnoremap Mt :SignatureToggle<CR>
 
 " RUN TESTS
 map <silent> <leader>t :call TriggerTest()<CR>
