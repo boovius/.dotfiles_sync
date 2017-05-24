@@ -80,7 +80,7 @@ let &stl='%t %([%R%M]%) %L %l,%c ' " Status line format
 set nowrap                   " Do not wrap text
 set hlsearch                 " Highligh search text
 set laststatus=2             " Always show the status bar
-set listchars=trail::,tab:-> " How trailing spaces & tabs should be represented (tabstop matters for tab)
+set listchars=trail:*,tab:-> " How trailing spaces & tabs should be represented (tabstop matters for tab)
 set list                     " Required in order for listchars to work
 set ruler
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
