@@ -98,10 +98,10 @@ set foldmethod=indent " Enable folding based on language syntax
 set nofoldenable      " Open files with all folds expanded
 
 " Toggle folding using the space bar.
-"nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-"vnoremap <Space> zf
-"nnoremap <C-]> :foldopen
-"nnoremap <C-[> :foldclose
+" nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+" vnoremap <Space> zf
+" nnoremap <C-]> :foldopen
+" nnoremap <C-[> :foldclose
 
 " map leader to space bar
 :let mapleader = "\<Space>"
@@ -196,6 +196,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 
 " Configure Ag - Silver Searcher to start at project root
 let g:ag_working_path_mode="r"
+nnoremap <Leader>a :Ag<Space>
 
 " *** No Color Scheme ***
 
@@ -206,12 +207,12 @@ let g:ag_working_path_mode="r"
 " move lines down and up
 " broken
 " TODO needs fixing
-nnoremap <C-,> :m .+1<CR>==
-nnoremap <C-.> :m .-2<CR>==
-inoremap <C-,> <Esc>:m .+1<CR>==gi
-inoremap <C-.> <Esc>:m .-2<CR>==gi
-vnoremap <C-,> :m '>+1<CR>gv=gv
-vnoremap <C-.> :m '<-2<CR>gv=gv
+nnoremap <C--> :m .+1<CR>
+nnoremap <C-+> :m .-2<CR>
+inoremap <C--> <Esc>:m .+1<CR>
+inoremap <C-+> <Esc>:m .-2<CR>
+vnoremap <C--> :m .+1<CR>
+vnoremap <C-+> :m .-2<CR>
 
 "jsx highlighting
 let g:jsx_ext_required = 0
