@@ -45,6 +45,7 @@ Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kshenoy/vim-signature'
+Plugin 'elmcast/elm-vim'
 
 call vundle#end()
 filetype plugin indent on
