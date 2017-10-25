@@ -13,40 +13,49 @@ Bundle 'gmarik/vundle.vim'
 Bundle 'mxw/vim-jsx'
 Bundle 'christoomey/vim-tmux-navigator'
 
-" vim-snipmate dependencies
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-
+" utilities
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-endwise'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/DeleteTrailingWhitespace'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'ervandew/supertab'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-markdown'
 Plugin 'vim-scripts/Align'
 Plugin 'ToadJamb/vim_alternate_file'
 Plugin 'ToadJamb/vim_tab_number'
-Plugin 'Keithbsmiley/swift.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'pangloss/vim-javascript'
 Plugin 'boovius/vim-buffergator'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ToadJamb/vim_test_runner'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kshenoy/vim-signature'
+Plugin 'Konfekt/FastFold'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'garbas/vim-snipmate'
+" vim-snipmate dependencies
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+
+" syntax
+Plugin 'tpope/vim-markdown'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-rails'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'elmcast/elm-vim'
 Plugin 'joukevandermaas/vim-ember-hbs'
+Plugin 'vim-python/python-syntax'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Keithbsmiley/swift.vim'
+
+" colors
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'nightsense/seagrey'
+Plugin 'nightsense/office'
 
 call vundle#end()
 filetype plugin indent on
@@ -174,8 +183,6 @@ map <silent> <leader>s :call OpenAlternateFile() <CR>
 nnoremap <Leader>/ :buffers<CR>
 nnoremap <Leader>f :b<Space>
 nnoremap <Leader>v :vert sb<Space>
-nnoremap <C-i> :bprevious<CR>
-nnoremap <C-o> :bnext<CR>
 " go to previous buffer and delete last one
 nnoremap <C-Delete> :bprevious<CR>:bd#<CR>
 nnoremap <Leader>3 :b#<CR>
@@ -226,5 +233,5 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "let g:solarized_termcolors=16  " Local
 "let g:solarized_termcolors=256 " Remote
 syntax enable
-set background=dark
+"set background=dark
 colorscheme solarized
