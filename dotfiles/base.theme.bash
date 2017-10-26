@@ -241,6 +241,15 @@ function prompt_char {
     scm_char
 }
 
+# Determine active Python virtualenv details.
+function virtualenv () {
+  if test -z "$VIRTUAL_ENV" ; then
+      echo ""
+  else
+      echo "$(basename $VIRTUAL_ENV) "
+  fi
+}
+
 if [ ! -e $BASH_IT/plugins/enabled/battery.plugin.bash ]; then
 # if user has installed battery plugin, skip this...
     function battery_charge (){
