@@ -146,3 +146,6 @@ function authme {
 #
 # Print path with each entry on new line
 alias path="echo $PATH | tr ':' '\n'"
+
+# Docker
+alias dc="docker-compose"
