@@ -64,3 +64,6 @@ eval "$(rbenv init -)"
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
+# added by Anaconda3 5.0.1 installer
+export PATH="/Users/joshuabook/anaconda3/bin:$PATH"
