@@ -3,9 +3,6 @@ set t_Co=16
 set nocompatible
 filetype off
 
-" Add snippets dir to vim runtimepath
-set rtp+=~/.vim/snippets
-
 set rtp+=~/.vim/bundle/vundle.vim
 call vundle#begin()
 
@@ -36,10 +33,19 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kshenoy/vim-signature'
 Plugin 'Konfekt/FastFold'
 Plugin 'tmhedberg/SimpylFold'
+
+" snippets
 Plugin 'garbas/vim-snipmate'
 " vim-snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+" the snippets
+Plugin 'honza/vim-snippets'
+" Add honza snippets dir to vim runtimepath
+set rtp+=~/.vim/bundle/vim-snippets/snippets
+" Add local snippets dir to vim runtimepath
+set rtp+=~/.vim/snippets
+
 
 " syntax
 Plugin 'tpope/vim-markdown'
