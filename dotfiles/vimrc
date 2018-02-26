@@ -14,27 +14,58 @@ Bundle 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-endwise'
-Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/DeleteTrailingWhitespace'
 Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/Align'
-Plugin 'ToadJamb/vim_alternate_file'
-Plugin 'ToadJamb/vim_tab_number'
+Plugin 'terryma/vim-multiple-cursors'
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" nerdtree
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'pangloss/vim-javascript'
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" buffers
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'boovius/vim-buffergator'
-Plugin 'terryma/vim-multiple-cursors'
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" test runner
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'ToadJamb/vim_test_runner'
+Plugin 'ToadJamb/vim_alternate_file'
+Plugin 'ToadJamb/vim_tab_number'
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" search
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" git
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" marks
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'kshenoy/vim-signature'
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" folding
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'Konfekt/FastFold'
 Plugin 'tmhedberg/SimpylFold'
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " snippets
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'garbas/vim-snipmate'
 " vim-snipmate dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -47,7 +78,10 @@ set rtp+=~/.vim/bundle/vim-snippets/snippets
 set rtp+=~/.vim/snippets
 
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " syntax
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-markdown'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-rails'
@@ -58,7 +92,9 @@ Plugin 'vim-python/python-syntax'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Keithbsmiley/swift.vim'
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " colors
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nightsense/seagrey'
 Plugin 'nightsense/office'
@@ -76,7 +112,10 @@ autocmd BufNewFile,BufRead Gemfile setf ruby
 set noswapfile " Turn off the use of swap files - seems to use them anyway
 "set dir=''     " Really turn off the use of swap files
 
-" Behavior
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" BEHAVIOR
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 set expandtab    " Expand tabs to spaces
 set tabstop=2    " Set tabs to two spaces (No conversion - just display)
 set shiftwidth=2 " Use 2 spaces when shifting with '>' or '<'
@@ -85,6 +124,18 @@ set smartcase    " Case-sensitive matching for patterns with an uppercase letter
 set backspace=2  " Make backspace/delete work in insert mode.
 set showcmd      " Show current command
 
+
+" Performance - Primarily for Ruby - Any file around 200 lines has a problem.
+" Solution found here:
+" http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
+"set ttyfast    " When playing with these 3 options, this one seemed to have no effect.
+"set re=1       " Use the old regex engine (default is 0).
+set lazyredraw " Don't redraw the screen for every little thing.
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" PRESENTATION
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Presentation - always visible
 syntax on                   " Syntax highlighting
 set number                  " Show line numbers in margin
@@ -97,20 +148,16 @@ let &stl='%t %([%R%M]%) %L %l,%c ' " Status line format
 set nowrap                   " Do not wrap text
 set hlsearch                 " Highligh search text
 set laststatus=2             " Always show the status bar
-set listchars=trail:*,tab:-> " How trailing spaces & tabs should be represented (tabstop matters for tab)
+set listchars=trail:_,tab:-> " How trailing spaces & tabs should be represented (tabstop matters for tab)
 set list                     " Required in order for listchars to work
 set ruler
 highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
 set colorcolumn=108
 
-" Performance - Primarily for Ruby - Any file around 200 lines has a problem.
-" Solution found here:
-" http://stackoverflow.com/questions/16902317/vim-slow-with-ruby-syntax-highlighting
-"set ttyfast    " When playing with these 3 options, this one seemed to have no effect.
-"set re=1       " Use the old regex engine (default is 0).
-set lazyredraw " Don't redraw the screen for every little thing.
 
-" Features
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" FOLDING
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 set foldmethod=indent " Enable folding based on language syntax
 set nofoldenable      " Open files with all folds expanded
 
@@ -120,6 +167,10 @@ set nofoldenable      " Open files with all folds expanded
 "nnoremap <C-]> :foldopen
 "nnoremap <C-[> :foldclose
 
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" BASIC LEADER FUNCTIONS
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " map leader to space bar
 :let mapleader = "\<Space>"
 
@@ -129,13 +180,11 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 " map delete trailing white space to leader d
 nnoremap <Leader>d :DeleteTrailingWhitespace<CR>
-" map tabedit to leader j
-nnoremap <Leader>j :tabedit<Space>
-" open new tab with leader p
-nnoremap <Leader>p :tabedit<CR>
-" map edit to leader e
-nnoremap <Leader>e :e<Space>
 
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" NERD TREE
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " map NERDtree plugin for file tree viewing
 map <Leader>' :NERDTreeToggle<CR>
 " Go to open file locaction in NerdTree
@@ -154,7 +203,10 @@ let NERDTreeIgnore = ['.pyc$']
 " insert space
 nnoremap <Leader>n i<Space><esc>
 
-" MOVEMENT
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" CURSOR MOVEMENT
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " go to line
 nnoremap ; G
 " go to last line visited
@@ -172,23 +224,27 @@ map W 5w
 " jump backward 5 words
 map B 5b
 
-" tab movement
-"nnoremap <C-o> gt
-"nnoremap <C-i> gT
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" PASTE
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " paste and jump to bottom of insertion
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-" Enter clears highlighting
-nnoremap <cr> :nohlsearch<cr>
 
-" Open alternate files
-command AF :execute OpenAlternateFile()
-map <silent> <leader>s :call OpenAlternateFile() <CR>
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" PANES
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" switch between/maximize panes
+nnoremap <leader>j <C-W>j<C-W>_
+nnoremap <leader>k <C-W>k<C-W>_
 
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " BUFFERS
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 nnoremap <Leader>/ :buffers<CR>
 nnoremap <Leader>f :b<Space>
 nnoremap <Leader>v :vert sb<Space>
@@ -196,13 +252,36 @@ nnoremap <Leader>v :vert sb<Space>
 nnoremap <C-Delete> :bprevious<CR>:bd#<CR>
 nnoremap <Leader>3 :b#<CR>
 
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" TABS
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" open new tab with leader p
+nnoremap <Leader>p :tabedit<CR>
+" map edit to leader e
+nnoremap <Leader>e :e<Space>
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " MARKERS - for use with vim-signature marker plugin
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 nnoremap Mt :SignatureToggle<CR>
 
-" RUN TESTS
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" RUN TESTS - pipe commands - Vim Test Runner by ToadJamb
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 map <silent> <leader>t :call TriggerTest()<CR>
 map <silent> <leader>r :call TriggerPreviousTest()<CR>
 
+" Open alternate files
+command AF :execute OpenAlternateFile()
+map <silent> <leader>s :call OpenAlternateFile() <CR>
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" SEARCHING
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Fuzzy Search Ctrl-P - utilizing Silver Searcher
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
@@ -215,12 +294,13 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 " Configure Ag - Silver Searcher to start at project root
 let g:ag_working_path_mode="r"
 
-" *** No Color Scheme ***
+" Enter clears highlighting
+nnoremap <cr> :nohlsearch<cr>
 
-"hi! String ctermfg=00
-"hi! LineNr ctermfg=04
-"hi! CursorLine ctermfg=none ctermbg=07 cterm=none
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" EDITING
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " move lines down and up
 " broken
 " TODO needs fixing
@@ -231,16 +311,29 @@ inoremap <C-.> <Esc>:m .-2<CR>==gi
 vnoremap <C-,> :m '>+1<CR>gv=gv
 vnoremap <C-.> :m '<-2<CR>gv=gv
 
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" SYNTAX & HIGHLIGHTING
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 "jsx highlighting
 let g:jsx_ext_required = 0
 
 "ejs syntax
 au BufNewFile,BufRead *.ejs set filetype=html
 
-" *** Miscellaneous ***
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" COLOR SCHEME
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 "let g:solarized_termcolors=16  " Local
 "let g:solarized_termcolors=256 " Remote
 syntax enable
 "set background=dark
 colorscheme solarized
+
+" *** No Color Scheme ***
+
+"hi! String ctermfg=00
+"hi! LineNr ctermfg=04
+"hi! CursorLine ctermfg=none ctermbg=07 cterm=none
+
