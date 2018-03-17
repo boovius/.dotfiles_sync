@@ -196,7 +196,13 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " have nerd tree ignore files with pyc extension
 let NERDTreeIgnore = ['.pyc$']
 
+" remap tree to vertical resize 30 nice vertical pane size for nerd tree
+nnoremap :tree<CR> :vertical resize 30<CR>
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " CHARACTER INSERTION AND MANIPULATION
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Increment/Decrement Numbers
 "nnoremap <C-s> <C-a>
 
@@ -328,7 +334,7 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "let g:solarized_termcolors=16  " Local
 "let g:solarized_termcolors=256 " Remote
 syntax enable
-"set background=dark
+set background=light
 colorscheme solarized
 
 " *** No Color Scheme ***
