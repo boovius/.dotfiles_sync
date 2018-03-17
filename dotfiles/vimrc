@@ -149,14 +149,14 @@ set lazyredraw " Don't redraw the screen for every little thing.
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Presentation - always visible
 syntax on                   " Syntax highlighting
-set number                  " Show line numbers in margin
+set nonumber                " Do not show line numbers in margin
 set cursorline              " Highlight the line the cursor is on
 set fillchars=stl:-,vert:\| " Set the characters used to fill borders
 
 let &stl='%t %([%R%M]%) %L %l,%c ' " Status line format
 
 " Presentation - conditional
-set nowrap                   " Do not wrap text
+set wrap                     " Wrap text
 set hlsearch                 " Highligh search text
 set laststatus=2             " Always show the status bar
 set listchars=trail:_,tab:-> " How trailing spaces & tabs should be represented (tabstop matters for tab)
