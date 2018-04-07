@@ -19,6 +19,10 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/Align'
 Plugin 'terryma/vim-multiple-cursors'
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" vim sessions
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+Plugin 'tpope/vim-obsession'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " nerdtree

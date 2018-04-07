@@ -38,7 +38,7 @@
 [core]
   pager = less -FXRS -x2
   editor = /usr/bin/vim
-  excludesfile = /Users/joshuabook/.gitignore_global
+	excludesfile = /Users/joshuabook/.gitignore_global
 [apply]
   whitespace = nowarn
 [color]
