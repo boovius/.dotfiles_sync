@@ -1,4 +1,4 @@
-set t_Co=16
+"set t_Co=16
 
 set nocompatible
 filetype off
@@ -102,6 +102,7 @@ Plugin 'Keithbsmiley/swift.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nightsense/seagrey'
 Plugin 'nightsense/office'
+Plugin 'morhetz/gruvbox'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " colors
@@ -156,7 +157,7 @@ set fillchars=stl:-,vert:\| " Set the characters used to fill borders
 let &stl='%t %([%R%M]%) %L %l,%c ' " Status line format
 
 " Presentation - conditional
-set nowrap                   " Do not wrap text
+set wrap                   " Do not wrap text
 set hlsearch                 " Highligh search text
 set laststatus=2             " Always show the status bar
 set listchars=trail:_,tab:-> " How trailing spaces & tabs should be represented (tabstop matters for tab)
@@ -339,8 +340,8 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "let g:solarized_termcolors=16  " Local
 "let g:solarized_termcolors=256 " Remote
 syntax enable
-"set background=dark
-colorscheme solarized
+set background=light
+colorscheme gruvbox
 
 " *** No Color Scheme ***
 
