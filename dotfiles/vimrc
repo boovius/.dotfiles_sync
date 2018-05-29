@@ -1,5 +1,3 @@
-"set t_Co=16
-
 set nocompatible
 filetype off
 
@@ -103,6 +101,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'nightsense/seagrey'
 Plugin 'nightsense/office'
 Plugin 'morhetz/gruvbox'
+Plugin 'NLKNguyen/papercolor-theme'
+
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " colors
@@ -337,13 +337,24 @@ au BufNewFile,BufRead *.ejs set filetype=html
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " COLOR SCHEME
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-"let g:solarized_termcolors=16  " Local
-"let g:solarized_termcolors=256 " Remote
+"set t_Co=16
+
+" 256 color chart - http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
+" Papercolor config - https://github.com/NLKNguyen/papercolor-theme/blob/master/DESIGN.md
+" Papercolor theme for iterm2 - https://github.com/stoeffel/material-iterm#downloads-cloud
+let g:PaperColor_Theme_Options = {
+      \   'theme': {
+      \     'default.light': {
+      \       'override' : {
+      \         'color00' : ['', '231'],
+      \       }
+      \     }
+      \   }
+      \ }
+
 syntax enable
 set background=light
-colorscheme gruvbox
-
-" *** No Color Scheme ***
+colorscheme Papercolor
 
 "hi! String ctermfg=00
 "hi! LineNr ctermfg=04
