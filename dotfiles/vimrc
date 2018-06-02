@@ -187,7 +187,7 @@ set nofoldenable      " Open files with all folds expanded
 :let mapleader = "\<Space>"
 
 " map write to leader w
-nnoremap <Leader>w :w<CR>
+"nnoremap <Leader>w :w<CR>
 " map quit to leader q
 nnoremap <Leader>q :q<CR>
 " map delete trailing white space to leader d
