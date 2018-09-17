@@ -46,6 +46,7 @@ Plugin 'ToadJamb/vim_tab_number'
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'dyng/ctrlsf.vim'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " git
@@ -210,7 +211,7 @@ let NERDTreeIgnore = ['.pyc$']
 
 " CHARACTER INSERTION AND MANIPULATION
 " Increment/Decrement Numbers
-"nnoremap <C-s> <C-a>
+nn <C-s> <C-a>
 
 " insert space
 nnoremap <Leader>n i<Space><esc>
