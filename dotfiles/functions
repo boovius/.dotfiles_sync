@@ -157,3 +157,9 @@ function hideHidden() {
   defaults write com.apple.Finder AppleShowAllFiles NO
   killall Finder
 }
+
+# reset camera (specifically for google hangouts)
+function resetCam() {
+  sudo killall VDCAssistant
+}
+
