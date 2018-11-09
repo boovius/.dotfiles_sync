@@ -3,6 +3,10 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
+# Move a path-result to the trash
+function d() {
+    mv "$1" ~/.Trash
+}
 
 # find shorthand
 function f() {
