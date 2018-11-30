@@ -72,3 +72,8 @@ export PATH
 
 # added by Anaconda3 5.0.1 installer
 export PATH="/Users/joshuabook/anaconda3/bin:$PATH"
+
+# andorid sdk
+export ANDROID_SDK=/Users/joshuabook/Library/Android/sdk
+export PATH=/Users/joshuabook/Library/Android/sdk/platform-tools:$PATH
+
