@@ -355,7 +355,7 @@ let g:PaperColor_Theme_Options = {
       \ }
 
 syntax enable
-set background=light
+set background=dark
 colorscheme Papercolor
 
 "hi! String ctermfg=00
