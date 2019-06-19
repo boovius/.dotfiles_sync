@@ -19,6 +19,8 @@ brew install nvm
 brew install npm
 brew install heroku
 brew install redis
+brew install bash
+brew install reattach-to-user-namespace
 
 # core programs
 brew cask install evernote
