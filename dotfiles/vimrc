@@ -94,6 +94,7 @@ Plugin 'joukevandermaas/vim-ember-hbs'
 Plugin 'vim-python/python-syntax'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Keithbsmiley/swift.vim'
+Plugin 'udalov/kotlin-vim'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " colors
