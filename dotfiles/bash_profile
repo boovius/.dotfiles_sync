@@ -63,7 +63,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 #pyenv init
-eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
 #pin global python version to 3.6.2
 export PYENV_VERSION=3.6.2
 
