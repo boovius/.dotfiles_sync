@@ -34,4 +34,9 @@ npm-debug-log
 my_scratch*
 scratchwork*
 
-.env*
+.env
+
+.vscode
+
+cloud_sql_proxy
+
