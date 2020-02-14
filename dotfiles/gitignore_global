@@ -36,7 +36,5 @@ scratchwork*
 
 .env
 
-.vscode
-
 cloud_sql_proxy
 
