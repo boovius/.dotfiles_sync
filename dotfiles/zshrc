@@ -119,5 +119,23 @@ unset file
 ##############################################
 # ZSH COMMAND LINE EDITOR
 ##############################################
-set -o vi
-# bind -m vi-command ".":insert-last-argument ## Command not working in zsh
+# Use vi as the default editor
+export EDITOR=vim
+# But still use emacs-style zsh bindings (e.g., ctrl-r)
+bindkey -e
+
+#############################################
+# linking psql command line util bin
+# https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
+#############################################
+PATH="/usr/local/opt/libpq/bin:$PATH
+
+
+#############################################
+# NVM
+#############################################
+
+export NVM_DIR="$HOME/.nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
