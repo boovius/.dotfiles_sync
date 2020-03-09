@@ -4,7 +4,7 @@ function md() {
 }
 
 # Move a path-result to the trash
-function d() {
+function trash() {
     mv "$1" ~/.Trash
 }
 
