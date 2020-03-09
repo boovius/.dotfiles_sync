@@ -111,7 +111,7 @@ export RUBYOPT='-W:no-deprecated -W:no-experimental'
 # Load ~/.extra, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 # to load your own defined bash_prompt add bash_prompt into curlies{}
-for file in ~/.{extra,bash_promptexports,aliases,functions}; do
+for file in ~/.{extra,exports,aliases,functions}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
