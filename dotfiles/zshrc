@@ -133,7 +133,8 @@ bindkey -e
 # linking psql command line util bin
 # https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
 #############################################
-PATH="/usr/local/opt/libpq/bin:$PATH
+# https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
+export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 
 #############################################
