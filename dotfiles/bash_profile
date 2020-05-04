@@ -1,6 +1,7 @@
-# Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
+# Load ~/.extra, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+# to load your own defined bash_prompt add bash_prompt into curlies{}
+for file in ~/.{extra,exports,aliases,functions}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -8,11 +9,6 @@ unset file
 # set vim as command line editor
 set -o vi
 bind -m vi-command ".":insert-last-argument
-
-# gives time now
-function now {
-  date +%m/%d-%H:%M
-}
 
 # init z   https://github.com/rupa/z
 # . ~/code/z/z.sh

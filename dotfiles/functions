@@ -1,3 +1,8 @@
+# gives time now
+function now {
+  date +%m/%d-%H:%M
+}
+
 # Create a new directory and enter it
 function md() {
 	mkdir -p "$@" && cd "$@"
