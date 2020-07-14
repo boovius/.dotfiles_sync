@@ -105,12 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# Mute warnings from ruby gems ruby 2.7.0 - https://stackoverflow.com/questions/59491848/how-to-fix-railss-warning-messages-with-ruby-2-7-0
-export RUBYOPT=''
-
 ######################################################
 # CUSTOM SETTINGS - carried over from old bash profile
 ######################################################
@@ -147,7 +141,6 @@ bindkey -v
 # https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
-
 #############################################
 # NVM
 #############################################
@@ -155,14 +148,6 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-
-################################################
-# updating path to .gem bin - done for cocoa pod
-################################################
-
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
 
 ##################################################
 # Jump config
@@ -181,3 +166,27 @@ autoload -Uz compinit && compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+################################################
+# Updating RUBYOPT
+################################################
+#
+# Mute warnings from ruby gems ruby 2.7.0 - https://stackoverflow.com/questions/59491848/how-to-fix-railss-warning-messages-with-ruby-2-7-0
+export RUBYOPT=''
+
+################################################
+# updating path to .gem bin - done for cocoa pod
+################################################
+
+#export GEM_HOME=$HOME/.gem
+#export GEM_HOME=
+#export PATH=$GEM_HOME/bin:$PATH
+
+################################################
+# rbenv init
+################################################
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
