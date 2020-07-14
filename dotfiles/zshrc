@@ -133,8 +133,12 @@ setopt GLOB_COMPLETE
 ##############################################
 # Use vi as the default editor
 export EDITOR=vim
+
+# https://www.techrepublic.com/blog/linux-and-open-source/using-vi-key-bindings-in-bash-and-zsh/
 # But still use emacs-style zsh bindings (e.g., ctrl-r)
-bindkey -e
+#bindkey -e
+# But still use vim-style zsh bindings (.e.g. f ( )
+bindkey -v
 
 #############################################
 # linking psql command line util bin
