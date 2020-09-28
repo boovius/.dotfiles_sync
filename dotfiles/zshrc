@@ -119,6 +119,8 @@ unset file
 
 ##############################################
 # Enable Wildcard completion
+#
+# https://superuser.com/questions/402989/how-do-i-get-zshs-autocomplete-to-complete-wildcards-like-bash-does
 ##############################################
 setopt GLOB_COMPLETE
 
