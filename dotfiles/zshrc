@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # Load ~/.extra, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 # to load your own defined bash_prompt add bash_prompt into curlies{}
-for file in ~/.{extra,exports,aliases,functions}; do
+for file in ~/.{extra,exports,aliases,functions,inputrc}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -127,12 +127,6 @@ setopt GLOB_COMPLETE
 ##############################################
 # Use vi as the default editor
 export EDITOR=vim
-
-# https://www.techrepublic.com/blog/linux-and-open-source/using-vi-key-bindings-in-bash-and-zsh/
-# But still use emacs-style zsh bindings (e.g., ctrl-r)
-#bindkey -e
-# But still use vim-style zsh bindings (.e.g. f ( )
-bindkey -v
 
 #############################################
 # linking psql command line util bin

@@ -7,11 +7,6 @@ set show-all-if-ambiguous on
 # Immediately add a trailing slash when autocompleting symlinks to directories
 set mark-symlinked-directories on
 
-# Use the text that has already been typed as the prefix for searching through
-# commands (i.e. more intelligent Up/Down behavior)
-"\e[B": history-search-forward
-"\e[A": history-search-backward
-
 # Do not autocomplete hidden files unless the pattern explicitly begins with a dot
 set match-hidden-files off
 
@@ -39,5 +34,39 @@ set input-meta on
 set output-meta on
 set convert-meta off
 
-# Use Alt/Meta + Delete to delete the preceding word
-"\e[3;3~": kill-word
+##############################################################################
+# Bind emacs style things within vim command line editing
+# https://misha.brukman.net/blog/2019/12/uniting-vim-and-emacs-in-zsh/
+# https://www.techrepublic.com/blog/linux-and-open-source/using-vi-key-bindings-in-bash-and-zsh/
+# But still use emacs-style zsh bindings (e.g., ctrl-r)
+#bindkey -e
+##############################################################################
+#
+# Use vim-style zsh bindings (.e.g. f ( )
+bindkey -v
+
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^K" kill-line
+bindkey "^L" clear-screen
+bindkey "^R" history-incremental-search-backward
+bindkey "^U" kill-whole-line
+bindkey "^W" backward-kill-word
+bindkey "^Y" yank
+bindkey "^R" history-incremental-search-backward
+
+##############################################################################
+# OLD BASH INPUTRC                                                           #
+##############################################################################
+## https://vi.stackexchange.com/questions/16355/how-to-run-the-history-search-in-vi-mode-in-bash
+#"\C-r": reverse-search-history
+#"\C-s": forward-search-history
+#"\C-o": operate-and-get-next
+#
+## Use the text that has already been typed as the prefix for searching through
+## commands (i.e. more intelligent Up/Down behavior)
+#"\e[B": history-search-forward
+#"\e[A": history-search-backward
+## Use Alt/Meta + Delete to delete the preceding word
+#"\e[3;3~": kill-word
+
