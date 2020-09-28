@@ -74,6 +74,10 @@ alias ngrok=/Applications/ngrok
 # reset mic/cam for video (google hangout)
 alias reset_cam='sudo killall VDCAssistant'
 
+# ruby
+# rubocop
+alias cop='rubocop'
+#
 # tmux
 alias tmux='TERM=xterm-256color tmux'
 alias test_runner='ruby ~/.vim/bundle/vim_test_runner/test_runner'
