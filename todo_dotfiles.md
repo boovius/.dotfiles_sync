@@ -2,10 +2,11 @@ TODO
 ====
 
 ## COMMAND LINE
- - [ ] Vim mode editing on command line
+ - [x] Vim mode editing on command line
+ - [x] with emacs style bindings for key use-cases (search, beg of line, etc.)
 
 ## GIT/COMMAND LINE
- - [ ] wildcard `*` git completion
+ - [x] wildcard `*` git completion
 
 ## VIM
  - [ ] Alt . on command line repeat last input
