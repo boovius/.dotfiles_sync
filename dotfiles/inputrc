@@ -54,6 +54,8 @@ bindkey "^U" kill-whole-line
 bindkey "^W" backward-kill-word
 bindkey "^Y" yank
 bindkey "^R" history-incremental-search-backward
+bindkey "^P" up-history
+bindkey "^N" down-history
 
 ##############################################################################
 # OLD BASH INPUTRC                                                           #
