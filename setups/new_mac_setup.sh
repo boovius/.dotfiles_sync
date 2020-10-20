@@ -44,11 +44,14 @@ rbenv install 2.7.0
 gem install rails
 
 # node
-nvm install v8.2.1
+nvm install --lts
 npm install -g mocha
 
 # zsh powerlevel 10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+
+# git-completion-zsh
+source ./zsh_git_completion.sh
 
 # dotfiles
 git clone git@github.com:boovius/.dotfiles_sync.git ~/.dotfiles_sync
