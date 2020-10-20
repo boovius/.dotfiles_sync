@@ -124,6 +124,13 @@ unset file
 ##############################################
 setopt GLOB_COMPLETE
 
+#########################################################
+# Enable lower case letters to complete capitalized words
+#
+# https://superuser.com/questions/1092033/how-can-i-make-zsh-tab-completion-fix-capitalization-errors-for-directories-and
+#########################################################
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
 ##############################################
 # ZSH COMMAND LINE EDITOR
 ##############################################
