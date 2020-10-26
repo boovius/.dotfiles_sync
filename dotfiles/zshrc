@@ -1,9 +1,16 @@
+##############################################################################
+# ZSHRC
+##############################################################################
+# If starting up zsh it complains about insecure site directories
+# https://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
+##############################################################################
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+##############################################################################
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -195,5 +202,12 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
+################################################
+# iterm2 shell integration
+################################################
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+################################################
+# Facebook - fbobjc
+################################################
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home
