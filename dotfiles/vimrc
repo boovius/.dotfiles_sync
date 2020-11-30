@@ -264,6 +264,7 @@ nmap cp :let @" = expand("%:p")<cr>
 nnoremap <leader>j <C-W>j<C-W>_
 nnoremap <leader>k <C-W>k<C-W>_
 
+nnoremap vz :vertical resize<Space>
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " BUFFERS
