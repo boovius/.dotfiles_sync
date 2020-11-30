@@ -3,6 +3,12 @@ function now {
   date +%m/%d-%H:%M
 }
 
+# converts unix time stamp to datetime
+# https://stackoverflow.com/questions/3249827/convert-unix-timestamp-to-a-date-string
+function stamp {
+  date -r "$1"
+}
+
 # Create a new directory and enter it
 function md() {
 	mkdir -p "$@" && cd "$@"
