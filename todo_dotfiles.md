@@ -16,6 +16,9 @@ TODO
  - [ ] wrapping txt in md docs
  - [ ] changing visual highlighting of line cursor is on
 
+## Vim and Markdown
+ - [SwampHogg vim markdown setup](https://www.swamphogg.com/2015/vim-setup/)
+
 ### vim_test_runner
  - [ ] fix
 
