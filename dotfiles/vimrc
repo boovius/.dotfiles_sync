@@ -85,7 +85,6 @@ set rtp+=~/.vim/snippets
 " syntax
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-markdown'
 Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-rails'
 Plugin 'kchmck/vim-coffee-script'
@@ -96,6 +95,20 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'Keithbsmiley/swift.vim'
 Plugin 'udalov/kotlin-vim'
 Plugin 'evanleck/vim-svelte'
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" Markdown
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+"
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+Plugin 'reedes/vim-pencil'
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Themes
