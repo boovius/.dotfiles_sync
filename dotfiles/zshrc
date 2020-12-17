@@ -119,7 +119,7 @@ plugins=(git tmux)
 # Load ~/.extra, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 # to load your own defined bash_prompt add bash_prompt into curlies{}
-for file in ~/.{extra,exports,aliases,functions,inputrc}; do
+for file in ~/.{extra,exports,aliases,local_aliases,functions,inputrc}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
