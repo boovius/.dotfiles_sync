@@ -1,0 +1,39 @@
+#!/bin/sh
+
+#############################################################################
+# PATH setup file
+#############################################################################
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+
+################################################
+# rbenv
+################################################
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+
+################################################
+# updating path to .gem bin - done for cocoa pod
+################################################
+
+#export GEM_HOME=$HOME/.gem
+#export GEM_HOME=
+#export PATH=$GEM_HOME/bin:$PATH
+
+#############################################
+# linking psql command line util bin
+# https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
+#############################################
+# https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+
+#############################################
+# Python3.9 libs
+#############################################
+export PATH="$PATH:~/Library/Python/3.9/bin"
+

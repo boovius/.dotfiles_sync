@@ -10,10 +10,6 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-##############################################################################
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 ################################################
 # THEME SETUP
@@ -119,7 +115,7 @@ plugins=(git tmux)
 # Load ~/.extra, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
 # to load your own defined bash_prompt add bash_prompt into curlies{}
-for file in ~/.{extra,exports,aliases,local_aliases,functions,inputrc}; do
+for file in ~/.{extra,exports,aliases,local_aliases,functions,inputrc,path}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -143,13 +139,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 ##############################################
 # Use vi as the default editor
 export EDITOR=vim
-
-#############################################
-# linking psql command line util bin
-# https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
-#############################################
-# https://blog.timescale.com/tutorials/how-to-install-psql-on-mac-ubuntu-debian-windows/
-export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 #############################################
 # NVM
@@ -177,7 +166,6 @@ autoload -Uz compinit && compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
 ################################################
 # Updating RUBYOPT
 ################################################
@@ -186,21 +174,9 @@ autoload -Uz compinit && compinit
 export RUBYOPT=''
 
 ################################################
-# updating path to .gem bin - done for cocoa pod
-################################################
-
-#export GEM_HOME=$HOME/.gem
-#export GEM_HOME=
-#export PATH=$GEM_HOME/bin:$PATH
-
-################################################
 # rbenv init
 ################################################
-
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 ################################################
 # iterm2 shell integration
