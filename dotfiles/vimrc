@@ -230,10 +230,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " have nerd tree ignore files with pyc extension
 let NERDTreeIgnore = ['.pyc$']
 
-" CHARACTER INSERTION AND MANIPULATION
-" Increment/Decrement Numbers
-nn <C-s> <C-a>
-
 " insert space
 nnoremap <Leader>n i<Space><esc>
 
@@ -248,7 +244,7 @@ nnoremap ;; ``
 " go to top
 nnoremap \ gg
 " go to front of line
-nnoremap <C-a> ^
+"nnoremap <C-a> ^
 " jump down 10 lines
 map <C-f> 10j
 " jump up 10 lines
