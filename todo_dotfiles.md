@@ -1,6 +1,9 @@
 TODO
 ====
 
+## TMUX
+ - [ ] keystroke to increment and decrement window sizes (veritcally)
+
 ## ZSH
  - [ ] increase history, make it more searchable and useful
    - [share history between panes tmux zsh](https://stackoverflow.com/questions/32057760/is-it-possible-to-not-share-history-between-panes-windows-in-tmux-with-zsh)
