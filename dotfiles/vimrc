@@ -244,7 +244,7 @@ nnoremap ;; ``
 " go to top
 nnoremap \ gg
 " go to front of line
-"nnoremap <C-a> ^
+nnoremap <C-a> ^
 " jump down 10 lines
 map <C-f> 10j
 " jump up 10 lines
@@ -254,6 +254,20 @@ map W 5w
 " jump backward 5 words
 map B 5b
 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" EDITING
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" Increase number
+noremap <A-s> <C-a>
+noremap <A-x> <C-x>
+
+" move lines down and up
+nnoremap <A-,> :m .+1<CR>==
+nnoremap <A-.> :m .-2<CR>==
+inoremap <A-,> <Esc>:m .+1<CR>==gi
+inoremap <A-.> <Esc>:m .-2<CR>==gi
+vnoremap <A-,> :m '>+1<CR>gv=gv
+vnoremap <A-.> :m '<-2<CR>gv=gv
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " COPY/PASTE
@@ -332,20 +346,6 @@ nnoremap <cr> :nohlsearch<cr>
 
 nnoremap <Leader>a :CtrlSF<Space>
 nnoremap <Leader>z :CtrlSFToggle<Space>
-
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-" EDITING
-" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-" move lines down and up
-" broken
-" TODO needs fixing
-nnoremap <C-,> :m .+1<CR>==
-nnoremap <C-.> :m .-2<CR>==
-inoremap <C-,> <Esc>:m .+1<CR>==gi
-inoremap <C-.> <Esc>:m .-2<CR>==gi
-vnoremap <C-,> :m '>+1<CR>gv=gv
-vnoremap <C-.> :m '<-2<CR>gv=gv
-
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " SYNTAX & HIGHLIGHTING
