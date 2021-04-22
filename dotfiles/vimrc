@@ -269,6 +269,9 @@ inoremap <A-.> <Esc>:m .-2<CR>==gi
 vnoremap <A-,> :m '>+1<CR>gv=gv
 vnoremap <A-.> :m '<-2<CR>gv=gv
 
+" Utility mapping to reorder nums in list, taking next num below and resetting
+" to one more than num cursor sits on
+noremap <A-0> yt.jhpldt.h<C-a>
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " COPY/PASTE
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
