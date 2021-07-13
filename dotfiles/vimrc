@@ -303,6 +303,9 @@ nnoremap <leader>k <C-W>k<C-W>_
 
 nnoremap vz :vertical resize<Space>
 
+nnoremap <A-l> :vertical resize +5<CR>
+nnoremap <A-h> :vertical resize -5<CR>
+
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " BUFFERS
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
