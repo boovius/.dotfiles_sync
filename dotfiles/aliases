@@ -1,7 +1,7 @@
 # Reload
 source ~/.local_aliases
 
-alias reload='source ~/.zsh_profile'
+alias reload='source ~/.zshrc'
 # Re-Sync dotfiles
 alias resync='~/.dotfiles_sync/makesymlinks.sh'
 # cd to this path
