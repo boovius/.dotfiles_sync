@@ -108,11 +108,19 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-" autocmds to enter Limelight focus mode, highlighting current paragraph,
+" autocmds to upon entering Goyo markdown focus mode 
+" """
+" Limelight focus mode, highlighting current paragraph,
 " dimming all others when entering Goyo automatically
 """"
 "autocmd! User GoyoEnter Limelight
 "autocmd! User GoyoLeave Limelight!
+""""
+" Pencil makes vim respond more like a word document where move commands move
+" along visual line breaks, not actual line breaks
+""""
+"autocmd! User GoyoEnter Pencil
+"autocmd! User GoyoLeave PencilOff
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Themes
