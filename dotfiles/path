@@ -37,3 +37,4 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 #############################################
 export PATH="$PATH:~/Library/Python/3.9/bin"
 
+source ~/.local_path_config
