@@ -130,6 +130,7 @@ Plugin 'nightsense/seagrey'
 Plugin 'nightsense/office'
 Plugin 'morhetz/gruvbox'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'git@github.com:fugalh/desert.vim.git'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " CSV
@@ -138,9 +139,14 @@ Plugin 'chrisbra/csv.vim'
 let g:csv_highlight_column = 'y'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-" SourceTrail
+" LSP Language Server Protocol config
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'CoatiSoftware/vim-sourcetrail'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+" Plugin 'prabirshrestha/async.vim'
+" Plugin 'prabirshrestha/vim-lsp'
+" Plugin 'mattn/vim-lsp-settings'
+" Plugin 'prabirshrestha/asyncomplete.vim'
+" Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " vundle end
@@ -273,12 +279,12 @@ noremap <A-s> <C-a>
 noremap <A-x> <C-x>
 
 " move lines down and up
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <C-J> :m .+1<CR>==
+nnoremap <C-K> :m .-2<CR>==
+inoremap <C-J> <Esc>:m .+1<CR>==gi
+inoremap <C-K> <Esc>:m .-2<CR>==gi
+vnoremap <C-J> :m '>+1<CR>gv=gv
+vnoremap <C-K> :m '<-2<CR>gv=gv
 
 " Utility mapping to reorder nums in list, taking next num below and resetting
 " to one more than num cursor sits on
@@ -368,6 +374,7 @@ nnoremap <Leader>z :CtrlSFToggle<Space>
 " SYNTAX & HIGHLIGHTING
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 "jsx highlighting
+let g:python_highlight_all = 1
 let g:jsx_ext_required = 0
 
 "ejs syntax
@@ -476,11 +483,13 @@ let g:mkdp_filetypes = ['markdown', 'md']
 " 256 color chart - http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 " Papercolor config - https://github.com/NLKNguyen/papercolor-theme/blob/master/DESIGN.md
 " Papercolor theme for iterm2 - https://github.com/stoeffel/material-iterm#downloads-cloud
+" 256 color chart for terminal vim - https://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 let g:PaperColor_Theme_Options = {
       \   'theme': {
       \     'default.light': {
       \       'override' : {
       \         'color00' : ['', '231'],
+      \         'color03' : ['', '80'],
       \       }
       \     }
       \   }
@@ -488,7 +497,7 @@ let g:PaperColor_Theme_Options = {
 
 syntax enable
 set background=dark
-colorscheme Papercolor
+colorscheme PaperColor
 
 "hi! String ctermfg=00
 "hi! LineNr ctermfg=04
