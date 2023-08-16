@@ -1,80 +1,87 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
+" delays and poor user experience
+set updatetime=300
 
-Bundle 'gmarik/vundle.vim'
-Bundle 'mxw/vim-jsx'
-Bundle 'christoomey/vim-tmux-navigator'
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved
+set signcolumn=yes
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" start plug in manager
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+call plug#begin('~/.vim/plugged')
 
 " utilities
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-endwise'
-Plugin 'vim-scripts/DeleteTrailingWhitespace'
-Plugin 'ervandew/supertab'
-Plugin 'vim-scripts/Align'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-endwise'
+Plug 'vim-scripts/DeleteTrailingWhitespace'
+Plug 'ervandew/supertab'
+Plug 'vim-scripts/Align'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'christoomey/vim-tmux-navigator'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " vim sessions
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'tpope/vim-obsession'
+Plug 'tpope/vim-obsession'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " nerdtree
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " buffers
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'boovius/vim-buffergator'
+Plug 'boovius/vim-buffergator'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " test runner
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'ToadJamb/vim_test_runner'
-Plugin 'ToadJamb/vim_alternate_file'
-Plugin 'ToadJamb/vim_tab_number'
+Plug 'ToadJamb/vim_test_runner'
+Plug 'ToadJamb/vim_alternate_file'
+Plug 'ToadJamb/vim_tab_number'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " search
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'mileszs/ack.vim'
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'dyng/ctrlsf.vim'
+Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'dyng/ctrlsf.vim'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " git
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " marks
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " folding
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'Konfekt/FastFold'
-Plugin 'tmhedberg/SimpylFold'
+Plug 'Konfekt/FastFold'
+Plug 'tmhedberg/SimpylFold'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " snippets
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'garbas/vim-snipmate'
+Plug 'garbas/vim-snipmate'
 " vim-snipmate dependencies
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 " the snippets
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 " Add honza snippets dir to vim runtimepath
 set rtp+=~/.vim/bundle/vim-snippets/snippets
 " Add local snippets dir to vim runtimepath
@@ -84,29 +91,33 @@ set rtp+=~/.vim/snippets
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " syntax
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'pangloss/vim-javascript'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-rails'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'elmcast/elm-vim'
-Plugin 'joukevandermaas/vim-ember-hbs'
-Plugin 'vim-python/python-syntax'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Keithbsmiley/swift.vim'
-Plugin 'udalov/kotlin-vim'
-Plugin 'evanleck/vim-svelte'
+Plug 'pangloss/vim-javascript'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-rails'
+Plug 'kchmck/vim-coffee-script'
+Plug 'elmcast/elm-vim'
+Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'vim-python/python-syntax'
+Plug 'leafgarland/typescript-vim'
+Plug 'Keithbsmiley/swift.vim'
+Plug 'udalov/kotlin-vim'
+Plug 'evanleck/vim-svelte'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'chr4/nginx.vim'
+Plug 'github/copilot.vim'
+Plug 'tpope/vim-endwise'
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Markdown
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 "
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
-Plugin 'reedes/vim-pencil'
-Plugin 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'reedes/vim-pencil'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " autocmds to upon entering Goyo markdown focus mode 
 " """
@@ -125,36 +136,44 @@ Plugin 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " Themes
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'nightsense/seagrey'
-Plugin 'nightsense/office'
-Plugin 'morhetz/gruvbox'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'git@github.com:fugalh/desert.vim.git'
+Plug 'altercation/vim-colors-solarized'
+Plug 'nightsense/seagrey'
+Plug 'nightsense/office'
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'git@github.com:fugalh/desert.vim.git'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " CSV
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'chrisbra/csv.vim'
+Plug 'chrisbra/csv.vim'
 let g:csv_highlight_column = 'y'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " LSP Language Server Protocol config
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-" Plugin 'prabirshrestha/async.vim'
-" Plugin 'prabirshrestha/vim-lsp'
-" Plugin 'mattn/vim-lsp-settings'
-" Plugin 'prabirshrestha/asyncomplete.vim'
-" Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'yaegassy/coc-pylsp', {'do': 'yarn install --frozen-lockfile'}
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-" vundle end
+" Plug end
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-call vundle#end()
+call plug#end()
+
 filetype plugin indent on
 
-" Plugin settings
+" Plug settings
 let g:instant_markdown_autostart = 0
 
 autocmd BufNewFile,BufRead Capfile setf ruby
@@ -312,6 +331,8 @@ nnoremap vz :vertical resize<Space>
 nnoremap <A-l> :vertical resize +5<CR>
 nnoremap <A-h> :vertical resize -5<CR>
 
+nnoremap <A-h> :vertical resize -5<CR>
+
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " BUFFERS
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
@@ -330,6 +351,12 @@ nnoremap <Leader>3 :b#<CR>
 nnoremap <Leader>p :tabedit<CR>
 " map edit to leader e
 nnoremap <Leader>e :e<Space>
+
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+" AUTOCOMPLETION - 
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+inoremap <Tab> <C-N>
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
@@ -478,7 +505,7 @@ let g:mkdp_filetypes = ['markdown', 'md']
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 " COLOR SCHEME
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-"set t_Co=16
+set t_Co=256
 
 " 256 color chart - http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 " Papercolor config - https://github.com/NLKNguyen/papercolor-theme/blob/master/DESIGN.md
