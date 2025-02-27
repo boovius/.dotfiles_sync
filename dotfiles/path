@@ -37,4 +37,17 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 #############################################
 export PATH="$PATH:~/Library/Python/3.9/bin"
 
+#############################################################################
+# Android Studio
+#############################################################################
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
+#############################################################################
+# Local Path Config
+#############################################################################
+
 source ~/.local_path_config
