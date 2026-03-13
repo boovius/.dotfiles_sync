@@ -106,6 +106,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'chr4/nginx.vim'
 Plug 'github/copilot.vim'
 Plug 'tpope/vim-endwise'
+Plug 'airblade/vim-tailwind'
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
