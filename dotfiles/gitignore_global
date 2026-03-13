@@ -42,3 +42,8 @@ cloud_sql_proxy
 Pods/**/
 
 scratch*
+
+myclaude*
+
+claude-instructions*
+.claude

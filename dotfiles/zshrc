@@ -209,3 +209,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export VOLTA_FEATURE_PNPM=1
+
+. "$HOME/.local/bin/env"
+alias codex='CODEX_HOME="$PWD/.codex" codex'

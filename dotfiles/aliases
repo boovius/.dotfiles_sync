@@ -149,3 +149,7 @@ alias path="echo $PATH | tr ':' '\n'"
 
 # Docker
 alias dc="docker-compose"
+
+# BMad
+## Codex
+alias codex='CODEX_HOME="$PWD/.codex" codex'
